@@ -1,0 +1,52 @@
+.footer{
+  background-color: #232536;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.subscribeblock{
+  background-color: #6D6E76;
+  padding: 40px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.leftsubscribe{
+  width: 50%;
+}
+
+.rightsubscribe input{
+  width: 500px;
+  padding: 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.security{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.icons{
+  display: flex;
+  gap: 20px;
+}
+
+
+.yellow-button {
+  background-color: #FFD050;
+  color: #232536;
+  border: none;
+  padding: 12px 24px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

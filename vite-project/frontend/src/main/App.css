@@ -1,0 +1,280 @@
+.poster {
+  width: 100vw;
+  height: 800px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.phototext {
+  position: absolute;
+  bottom: 220px;
+  left: 60px;
+  z-index: 1;
+  color: white;
+}
+.phototext h4 span{
+  color: #FFD050;
+}
+
+.phototext h3 {
+  text-transform: uppercase;
+}
+
+.mainBlock {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 30% 35%;
+  justify-content: space-evenly;
+}
+
+.photoblock {
+  width: 550px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftBlock h4 span{
+  color: #592EA9;
+}
+
+.leftphoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.allposts div:nth-of-type(2) {
+  background-color: #FBF6EA;
+  padding: 10px 25px;
+}
+
+.allposts div{
+  padding: 10px 25px;
+}
+
+.allposts div h4 span{
+  color: #592EA9;
+}
+
+
+.centerdiv {
+  height: 500px;
+  position: relative;
+  display: flex;
+    flex-wrap: wrap;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.colorblocks {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+}
+
+.colorblocks div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  position: relative;
+}
+.colorblocks div:nth-of-type(2) {
+  background-color: #FFD050;
+  width: 700px;
+}
+.colorblocks div:nth-of-type(3) {
+  background-color: #592EA9;
+  width: 200px;
+}
+
+.textblocks {
+  z-index: 1;
+  width: 70.2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 80px;
+  position: absolute;
+  padding: 20px;
+  background-color: #F4F0F8;
+  top: 70px;
+}
+
+.purple-button {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 20px;
+  color: #592EA9;
+}
+.category {
+  font-size: 2rem;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.fourblocks, .fourpeople {
+  width: 73%;
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr);
+  gap: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.fourblocks div:nth-of-type(2) {
+  background-color: #FFD050;
+  padding: 10px 25px;
+}
+.fourblocks div:nth-of-type(2) img{
+  width: 20px;
+  padding: 15px;
+  border-radius: 18px;
+}
+.fourblocks div{
+  padding: 10px;
+  border: 1px solid lightgrey ;
+}
+.fourblocks div img{
+  width: 33px;
+  padding: 10px;
+  background-color: #FBF6EA;
+  border-radius: 20px;
+}
+
+.fourpeople div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center ;
+}
+
+.phototextblock {
+  margin-top: 40px;
+  display: flex;
+}
+
+.leftside img {
+  margin-left: 203px;
+  width: 108%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.leftside{
+  width: 55%;
+}
+.rightside{
+  background-color: #fff;
+  padding: 60px;
+  width: 580px;
+  margin-top: 80px;
+}
+
+.fourpeople div .icons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.icons{
+  padding: 20px;
+}
+.firstperson{
+  padding: 20px;
+  background-color:#F4F4F4;
+}
+.secondperson{
+  padding: 20px;
+  background-color:#FBF6EA;
+}
+.fourpeople div:nth-of-type(3){
+  padding: 20px;
+  background-color:#F4F4F4;
+}
+.fourpeople div:nth-of-type(4){
+  padding: 20px;
+  background-color:#F4F4F4;
+}
+
+.sponsors {
+  display: flex;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  width: 60%;
+  margin: 0 auto;
+  background-color:#FBF6EA ;
+  padding: 60px;
+}
+
+.manphoto {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.leftsideslide {
+  padding: 20px;
+  border-right: 1px solid grey;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.maninfo {
+  display: flex;
+  align-items: center;
+}
+.photo {
+  width: 70px;
+  margin-right: 15px;
+}
+
+.rightsideslide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+h5,p{
+  margin: 0;
+}
+
+
+.joinblock {
+  width: 300px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+}
+
