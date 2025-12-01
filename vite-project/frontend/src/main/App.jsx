@@ -68,9 +68,11 @@ function App() {
         <h1>Step-by-step guide to choosing great font pairs</h1>
         <h4> By<span> James West </span>  |  May 23, 2022 </h4>
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-        <button className="yellow-button">Read More</button>
+        <button className="yellow-button">Read More &gt;</button>
       </div>
-      <img src={poster} className="poster"/>
+      <div className="poster-wrapper">
+        <img src={poster} className="poster" alt="poster" />
+      </div>
       <div className='mainBlock'>
           <div className='leftBlock'>
             <h2>Featured Post</h2>
@@ -80,7 +82,7 @@ function App() {
             <h4>By  <span>John Deo</span>   |   Aug 23, 2021 </h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-            <button className="yellow-button">Read More</button>
+            <button className="yellow-button">Read More  &gt;</button>
           </div>
           <div className='rightBlock'>
               <h2>All Posts</h2>
@@ -110,7 +112,7 @@ function App() {
               <h4>About Us</h4>
               <h2>We are a community of content writers who share their learnings</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button className="purple-button">Read More</button>
+              <button className="purple-button">Read More  &gt;</button>
             </div>
             <div>
               <h4>Our Mission</h4>

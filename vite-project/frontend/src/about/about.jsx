@@ -24,7 +24,7 @@ function About() {
       <div className="textblock">
         <div className="left">
             <h3>About Us</h3>
-            <h1>We are a community of content writers who share their learnings</h1>
+            <h1>We are a team of content writers who share their learnings</h1>
         </div>
         <div className="right">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus veniam sint commodi dolore ab? Animi perferendis nobis molestiae similique doloribus, laboriosam corrupti, repellendus praesentium, quidem tenetur eos aut eveniet!</p>
@@ -34,70 +34,59 @@ function About() {
             <img src={people} className="people"/>
         </div>
       <div className="">
-        <div className="">
-            <div>
-              <h4>About Us</h4>
-              <h2>We are a community of content writers who share their learnings</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button className="purple-button">Read More</button>
-            </div>
-            <div>
-              <h4>Our Mission</h4>
-              <h2>Creating valuable content for creatives all around the world</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div className="colorblocks">
-                <div>
-                    <div className="numberone">
+          <div className="numberblocks">
+                <div className="numbers">
+                    <div className="number_one">
                          <h1>12+</h1>
                         <label htmlFor="">Blogs Published</label>
                     </div>
-                    <div className="numbertwo">
+                    <div className="number_two">
                          <h1>18K+</h1>
                         <label htmlFor="">Views on Finsweet</label>
                     </div>
-                    <div className="numberthree">
+                    <div className="number_three">
                          <h1>30K+</h1>
                         <label htmlFor="">Total active Users</label>
                     </div>
                 </div>
-                <div></div>
-                <div></div>
+                <div className="color_block">
+                  <div className='purple'></div>
+                  <div className='orange'></div>
+                </div>
+
           </div>
       </div>
-      <div className="centerdiv">
-        <div className="textblocks">
+        <div className="textblock_main">
             <div>
               <h4>About Us</h4>
               <h2>We are a community of content writers who share their learnings</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button className="purple-button">Read More</button>
+              <button className="purple-button">Read More &gt;</button>
             </div>
             <div>
               <h4>Our Mission</h4>
               <h2>Creating valuable content for creatives all around the world</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-        </div>
       </div>
       <div className='textblockright'>
-       <div className="text">
+       <div className="text_left">
         <h2>Our team of creatives</h2>
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
        </div>
        <div className="figure"></div>
-       <img src={hands} alt="" />
+       <img src={hands} alt="" className='hands'/>
       </div>
-      <div className='textblockleft'>
-       <div className="text">
+      <div className='textblockleft'> 
+        <img src={group} alt="" className='group'/>
+
+       <div className="text_right">
         <h2>Why we started this Blog</h2>
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
        </div>
        <div className="circle"></div>
-       <img src={group} alt="" />
       </div>
           <h1 className='category'>List of authors</h1>
           <div className='fourpeople'>
