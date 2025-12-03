@@ -1,0 +1,111 @@
+.main_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    position: relative;
+    padding: 40px 0px 60px 0px;
+}
+.main_text label{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.main_text p{
+    margin-top: 20px;
+    font-size: 18px;
+    width: 600px;
+    text-align: center;
+}
+.main_text h1 {
+    font-weight: bold;
+    font-size: 43px;
+}
+.main_block{
+    height: 100%;
+}
+.mainsection{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.fourblocks{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.postsection{
+    width: 75%;
+    display: flex;
+}
+.categorysection{
+    width: 100%;
+}
+.fourblocks div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    padding: 5px;
+}
+
+.fourblocks div{ cursor: pointer; }
+
+/* Highlight active category */
+.fourblocks div.active{
+    outline: 2px solid #FFD050;
+    border-radius: 6px;
+    background: #FFF7E6;
+}
+.fourblocks div img {
+    width: 15%;
+    height: 15%;
+    object-fit: cover;
+    display: block;
+}
+.fourblocks div:nth-of-type(2) {
+    background-color: #FFD050;
+    padding: 5px 12px;
+}
+.singlepost {
+    width: 100%;
+}
+.secondsection{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.tagssection{
+    margin: 0 auto;
+    width: 73%;
+}
+.tagblocks div {
+    height: 40px;
+    font-size: 10px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tagblocks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.bus, .exp{
+    width: 40%;
+}
+.scr, .life {
+    width: 30%;
+}
+.tech, .mark {
+    width: 50%;
+}
+.category{
+    align-items: flex-start;
+}
