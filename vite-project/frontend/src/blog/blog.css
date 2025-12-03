@@ -197,3 +197,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+/* Remove default link styling for post links and make whole block clickable */
+.post-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

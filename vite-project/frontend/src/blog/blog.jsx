@@ -19,6 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useRef, useState, useEffect } from "react";
 
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function Blog() {
 
@@ -94,16 +95,12 @@ function Blog() {
               <h2 className='allpost'>All Posts</h2>
               <hr />
                 <div>
-                  {apiError && (
-                    <div className="api-error" style={{ color: 'red' }}>
-                      Error loading posts: {apiError}
-                    </div>
-                  )}
 
                   {!apiError && posts.length === 0 && <p>No posts yet.</p>}
 
-                  {!apiError && posts.map((post, idx) => (
-                    <div key={idx} className="singlepost">
+                  {!apiError && posts.map((post, idx) => {
+                    const inner = (
+                      <>
                         {post.raw.photo && (
                           <div
                             className="post-image"
@@ -118,7 +115,7 @@ function Blog() {
                               }}
                               style={orientations[idx] === 'portrait'
                                 ? { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }
-                                : { maxWidth: '100%', height: '100%', objectFit: 'cover' }
+                                : { maxWidth: '100%', objectFit: 'cover' }
                               }
                               onError={() => console.log("ERROR LOADING:", post.raw.photo)}
                             />
@@ -129,9 +126,22 @@ function Blog() {
                           <h3 className="post-label">{post.label}</h3>
                           <h2>{post.www}</h2>
                           <p>{post.description || ''}</p>
-                      </div>
-                    </div>
-                  ))}
+                        </div>
+                      </>
+                    );
+
+                    if (idx === 0) {
+                      return (
+                        <Link key={idx} to={`/post`} className="post-link">
+                          <div className="singlepost">{inner}</div>
+                        </Link>
+                      );
+                    }
+
+                    return (
+                      <div key={idx} className="singlepost">{inner}</div>
+                    );
+                  })}
                 </div>
           </div>
       </div>
@@ -147,6 +157,7 @@ function Blog() {
               <img src={logo2} alt="" />
               <h2>Startup</h2>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              
             </div>
             <div>
               <img src={logo3} alt="" />

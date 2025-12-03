@@ -5,6 +5,7 @@ import App from './Main/App'
 import Blog from './blog/blog'
 import ContactUs from './contact_us/contact';
 import About from './about/about';
+import Post from './post/post';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/about" element={<About />} />
+      <Route path="/post" element={<Post />} />
     </Routes>
   </BrowserRouter>
 )
