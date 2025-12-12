@@ -107,7 +107,7 @@ function Business() {
         <div className="secondsection">
             <div className="categorysection">
                 <h1 className='category'>Categories</h1>
-                <div className='fourblocks'>
+                <div className='fourblocks_vertical'>
                     <div
                       className={selectedCategory === 'Business' ? 'active' : ''}
                       onClick={() => setSelectedCategory(selectedCategory === 'Business' ? null : 'Business')}

@@ -1,0 +1,88 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .phototext h1 {
+        font-size: 30px;
+    }
+    .phototext h4 {
+        font-size: 15px;
+    }
+    .phototext{
+        left: 20px !important;
+        top: 180px;
+    }
+    .mainBlock {
+        padding: 0px;
+        grid-template-columns: 100%;
+        justify-content: space-evenly;
+    }
+    .leftBlock {
+        margin: 0 auto;
+    } 
+    .rightBlock h2{
+        padding-left: 25px;
+    }
+    .fourblocks{
+        grid-template-columns: repeat(2, 0.5fr) !important; 
+    }
+    .fourpeople {
+        grid-template-columns: repeat(2, 0.5fr) !important; 
+        gap: 5px !important;
+    }
+    .colorblocks {
+        display: none;
+    }
+    .textblocks {
+        position: relative;
+    }
+    .leftsubscribe h1{
+        font-size: 25px;
+    }
+    .slidersection, .slick-slider, .slides {
+        display: none !important;
+    }
+    .joinblock{
+        padding: 0 !important;
+    }
+    .leftsubscribe{
+        width: 100% !important;
+    }
+    .rightsubscribe input {
+        width: 100% !important;
+    }
+    .leftside img {
+        margin-left: 0 !important;
+    }
+    .rightside {
+        font-size: 20px;
+        margin-top: 0 !important;
+        padding: 0px 20px !important;
+        margin: 0 auto;
+    }
+    .rightside h1 {
+        font-size: 30px;
+    }
+    .fourpeople div{
+        padding: 10px 5px !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .phototext p {
+        width: 100%;
+    }
+    .phototext h1 {
+        width: 100%;
+        font-size: 30px;
+    }
+    .rightsubscribe input {
+        width: 100% !important;
+    }
+    .mainBlock {
+        grid-template-columns: 58% 32%;
+    }
+    .rightside {
+        width: 100% !important;
+    }
+     .rightside h1 {
+        font-size: 30px;
+    }
+}

@@ -15,7 +15,11 @@
   text-align: left;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .subscribeblock{
+    flex-wrap: wrap;
+  }
+}
 .leftsubscribe{
   width: 50%;
 }
@@ -34,7 +38,11 @@
   text-align: left;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .security{
+    flex-wrap: wrap;
+  }
+}
 .icons{
   display: flex;
   gap: 20px;

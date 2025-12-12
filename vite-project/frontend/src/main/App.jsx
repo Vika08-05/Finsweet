@@ -1,4 +1,5 @@
 import './App.css'
+import './media.css'
 import Header from '../header/header.jsx'
 import Footer from '../footer/footer.jsx'
 import { Link } from 'react-router-dom';
@@ -126,6 +127,7 @@ function App() {
                 <div></div>
           </div>
       </div>
+      <div className="fourblocksblock">
           <h1 className='category'>Choose A Category</h1>
           <div className='fourblocks'>
             <div>
@@ -148,7 +150,9 @@ function App() {
               <h2>Technology</h2>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </div>
-          </div>
+          </div>        
+      </div>
+
           <div className="phototextblock">
             <div className="leftside">
               <img src={photo1} alt="" />
@@ -209,7 +213,7 @@ function App() {
           </div>
           <img src={sponsors} alt="" className='sponsors' />
 
-          <Slider ref={sliderRef} {...settings}>
+          <Slider ref={sliderRef} {...settings} className="slidersection">
             {slides.map((slide, idx) => (
               <div key={idx}>
                 <div className="slides">

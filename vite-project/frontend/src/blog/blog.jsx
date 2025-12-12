@@ -4,15 +4,9 @@ import logo1 from '../assets/logo1.png'
 import logo2 from '../assets/logo2.png'
 import logo3 from '../assets/logo3.png'  
 import logo4 from '../assets/logo4.png'
-import person1 from '../assets/person1.png'
-import person2 from '../assets/person2.png'  
-import person3 from '../assets/person3.png'  
-import person4 from '../assets/person4.png'
-import photo1 from '../assets/people.png'
-import sponsors from '../assets/Logo component.png'
-import manphoto from '../assets/man.png'
 
 import Header from '../header/header.jsx'
+import Footer from '../footer/footer.jsx'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -177,40 +171,7 @@ function Blog() {
             <button className="yellow-button">Join Now</button>
           </div>
 
-          <div className="footer">
-            <div className="footer-container">
-              <h1>Finsweet</h1>
-              <ul>
-                <li>Home</li>
-                <li>Blog</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-            <div className="subscribeblock">
-              <div className="leftsubscribe">
-                <h1>Subscribe to our news letter to get latest updates and news</h1>
-              </div>
-              <div className="rightsubscribe">
-                <input type="email" placeholder="Enter your email" />
-                <button className="yellow-button">Subscribe</button>
-              </div>
-            </div>
-            <div className="security">
-              <div className="datenschutz">
-                <p>Finstreet 118 2561 Fintown</p>
-                <p>Hello@finsweet.com  020 7993 2905</p>
-              </div>
-              <div className="icons">
-                <FaFacebookF style={{ fontSize: '20px', color: 'grey' }} />
-                <FaLinkedinIn style={{ fontSize: '20px', color: 'grey' }} />
-                <FaInstagram style={{ fontSize: '20px', color: 'grey' }} />
-                <FaTwitter style={{ fontSize: '20px', color: 'grey' }} />
-              </div>
-            </div>
-            
-          </div>
+          <Footer />
       </div>
   )
 }

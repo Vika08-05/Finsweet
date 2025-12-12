@@ -38,6 +38,11 @@
   display: flex;
   gap: 40px;
 }
+@media (max-width: 768px) {
+  .postSection{
+    flex-wrap: wrap;
+  }
+}
 .singlepost {
   width: 100%;
   display: flex;
@@ -46,19 +51,27 @@
   align-items: center;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .singlepost{
+    flex-wrap: wrap;
+  }
+}
 .main_phototext p{
   width: 775px;
 }
 
 .photoblock {
-  width: 550px;
   height: 300px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .photoblock{
+    flex-wrap: wrap;
+  }
 }
 .allpost{
   font-size: 40px;
@@ -144,7 +157,11 @@
   margin: 0 auto;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .joinblock{
+    flex-wrap: wrap;
+  }
+}
 .footer{
   background-color: #232536;
   color: white;
@@ -162,7 +179,11 @@
   text-align: left;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .subscribeblock{
+    flex-wrap: wrap;
+  }
+}
 .leftsubscribe{
   width: 50%;
 }
@@ -181,7 +202,11 @@
   text-align: left;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .security{
+    flex-wrap: wrap;
+  }
+}
 .icons{
   display: flex;
   gap: 20px;

@@ -8,6 +8,11 @@
   z-index: 10;
   position: relative;
 }
+@media (max-width: 768px) {
+  .textblock{
+    flex-wrap: wrap;
+  }
+}
 .left{
   background-color: #fff;
   padding: 40px;
@@ -52,7 +57,6 @@
 }
 
 .photoblock {
-  width: 550px;
   height: 300px;
   overflow: hidden;
   display: flex;
@@ -60,7 +64,11 @@
   align-items: center;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .photoblock{
+    flex-wrap: wrap;
+  }
+}
 .leftBlock h4 span{
   color: #592EA9;
 }
@@ -87,12 +95,17 @@
 }
 
 .centerdiv {
-  height: 500px;
+  height: 100%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .centerdiv{
+    flex-wrap: wrap;
+  }
 }
 
 .numbers{
@@ -102,6 +115,11 @@
   background-color: #FFD050;
   padding: 10px 40px;
   margin-left: 206px;
+}
+@media (max-width: 768px) {
+  .numbers{
+    flex-wrap: wrap;
+  }
 }
 .purple{
     width: 300px;
@@ -120,6 +138,11 @@
   justify-content: start;
   margin-left: 206px;
 }
+@media (max-width: 768px) {
+  .color_block{
+    flex-wrap: wrap;
+  }
+}
 
 
 
@@ -137,6 +160,11 @@
     position: relative;
     padding: 60px 80px;
     background-color: #F4F0F8;
+}
+@media (max-width: 768px) {
+  .textblock_main{
+    flex-wrap: wrap;
+  }
 }
 
 .purple-button {
@@ -162,6 +190,12 @@
   flex-direction: row;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .textblockright, .textblockleft {
+    flex-wrap: wrap;
+  }
+}
+
 .fourblocks, .fourpeople {
   width: 73%;
   display: grid;
@@ -199,11 +233,22 @@
   justify-content: center;
   text-align: center ;
 }
+@media (max-width: 768px) {
+  .fourpeople div{
+    flex-wrap: wrap;
+  }
+}
 
 .phototextblock {
   margin-top: 40px;
   display: flex;
 }
+@media (max-width: 768px) {
+  .phototextblock{
+    flex-wrap: wrap;
+  }
+}
+
 .figure{
   width: 103px;
   height: 116px;
@@ -224,18 +269,15 @@
 
 .leftside img {
   margin-left: 203px;
-  width: 108%;
+  width: 100%;
   height: 90%;
   object-fit: cover;
 }
 
-.leftside{
-  width: 55%;
-}
 .rightside{
   background-color: #fff;
   padding: 60px;
-  width: 580px;
+  width: 100%;
   margin-top: 80px;
 }
 
@@ -244,7 +286,11 @@
   flex-direction: row;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .fourpeople div .icons{
+    flex-wrap: wrap;
+  }
+}
 .icons{
   padding: 20px;
 }
@@ -270,7 +316,11 @@
   padding: 50px;
   margin: 0 auto;
 }
-
+@media (max-width: 1324px) {
+  .sponsors{
+    display: none;
+  }
+}
 .slides {
   display: flex;
   flex-direction: row;
@@ -302,6 +352,17 @@
   justify-content: space-between;
   margin-top: 40px;
 }
+@media (max-width: 768px) {
+  .info {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .maninfo {
+    flex-wrap: wrap;
+  }
+}
+
 .maninfo {
   display: flex;
   align-items: center;
@@ -317,6 +378,11 @@
   justify-content: center;
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .rightsideslide{
+    flex-wrap: wrap;
+  }
+}
 h5,p{
   margin: 0;
 }
@@ -331,6 +397,11 @@ h5,p{
   align-items: center;
   margin: 0 auto;
   gap: 10px;
+}
+@media (max-width: 768px) {
+  .joinblock {
+    flex-wrap: wrap;
+  }
 }
 
 .footer{
@@ -349,6 +420,12 @@ h5,p{
   align-items: center;
   text-align: left;
   gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .subscribeblock {
+    flex-wrap: wrap;
+  }
 }
 
 .leftsubscribe{
@@ -370,11 +447,21 @@ h5,p{
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .security {
+    flex-wrap: wrap;
+  }
+}
 .icons{
   display: flex;
   gap: 20px;
 }
 
+@media (max-width: 768px) { 
+  .icons {
+    flex-wrap: wrap;
+  }
+}
 
 .yellow-button {
   background-color: #FFD050;

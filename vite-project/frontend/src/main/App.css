@@ -39,11 +39,11 @@
 }
 
 .phototext h1{
-  width: 975px;
+  width: 75%;
 }
 
 .phototext p{
-  width: 775px;
+  width: 75%;
 }
 
 .phototext h3 {
@@ -53,12 +53,11 @@
 .mainBlock {
   padding: 40px;
   display: grid;
-  grid-template-columns: 32% 28%;
-  justify-content: space-evenly;
+  grid-template-columns: 50% 28%;
+  justify-content: center;
 }
 
 .photoblock {
-  width: 550px;
   height: 300px;
   overflow: hidden;
   display: flex;
@@ -66,7 +65,11 @@
   align-items: center;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .photoblock{
+    flex-wrap: wrap;
+  }
+}
 .leftBlock{
   padding: 20px;
   border: 1px solid lightgrey;
@@ -101,12 +104,18 @@
 
 
 .centerdiv {
-  height: 420px;
+  height: 100%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .centerdiv{
+    flex-wrap: wrap;
+  }
 }
 
 .colorblocks {
@@ -115,7 +124,11 @@
   padding: 40px;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .colorblocks{
+    flex-wrap: wrap;
+  }
+}
 .colorblocks div {
   display: flex;
   flex-wrap: wrap;
@@ -124,6 +137,11 @@
   width: 200px;
   background-color: #fff;
   position: relative;
+}
+@media (max-width: 768px) {
+  .colorblocks div{
+    flex-wrap: wrap;
+  }
 }
 .colorblocks div:nth-of-type(2) {
   background-color: #FFD050;
@@ -146,7 +164,14 @@
   background-color: #F4F0F8;
   top: 70px;
 }
-
+@media (max-width: 768px) {
+  .textblocks{
+    flex-wrap: wrap;
+  }
+}
+.fourblocksblock{
+  padding: 30px 0;
+}
 .purple-button {
   background-color: transparent;
   padding: 0;
@@ -166,6 +191,7 @@
   margin: 0 auto;
   justify-content: center;
   align-content: center;
+  margin-bottom: 40px;
 }
 
 .fourblocks div:nth-of-type(2) {
@@ -195,26 +221,33 @@
   justify-content: center;
   text-align: center ;
 }
+@media (max-width: 768px) {
+  .fourpeople div{
+    flex-wrap: wrap;
+  }
+}
 
 .phototextblock {
   margin-top: 40px;
   display: flex;
+} 
+@media (max-width: 768px) {
+  .phototextblock{
+    flex-wrap: wrap;
+  }
 }
 
 .leftside img {
   margin-left: 203px;
-  width: 108%;
+  width: 100%;
   height: 90%;
   object-fit: cover;
 }
 
-.leftside{
-  width: 55%;
-}
 .rightside{
   background-color: #fff;
   padding: 60px;
-  width: 580px;
+  width: 100%;
   margin-top: 80px;
 }
 
@@ -222,6 +255,11 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+@media (max-width: 768px) {
+  .fourpeople div .icons{
+    flex-wrap: wrap;
+  }
 }
 
 .icons{
@@ -245,11 +283,15 @@
 }
 
 .sponsors {
-  display: flex;
+  display: none;
   padding: 50px;
   margin: 0 auto;
 }
-
+@media (max-width: 1324px) {
+  .sponsors{
+    display: none;
+  }
+}
 .slides {
   display: flex;
   flex-direction: row;
@@ -259,6 +301,11 @@
   margin: 0 auto;
   background-color:#FBF6EA ;
   padding: 60px;
+}
+@media (max-width: 768px) {
+  .slides{
+    flex-wrap: wrap;
+  }
 }
 
 .manphoto {
@@ -281,9 +328,19 @@
   justify-content: space-between;
   margin-top: 40px;
 }
+@media (max-width: 768px) {
+  .info{
+    flex-wrap: wrap;
+  }
+}
 .maninfo {
   display: flex;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .maninfo{
+    flex-wrap: wrap;
+  }
 }
 .photo {
   width: 70px;
@@ -295,6 +352,11 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+}
+@media (max-width: 768px) {
+  .rightsideslide{
+    flex-wrap: wrap;
+  }
 }
 h5,p{
   margin: 0;
@@ -313,4 +375,8 @@ h5,p{
   margin: 0 auto;
   gap: 10px;
 }
-
+@media (max-width: 768px) {
+  .joinblock{
+    flex-wrap: wrap;
+  }
+}

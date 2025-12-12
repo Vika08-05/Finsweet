@@ -7,6 +7,13 @@
     position: relative;
     padding: 40px 0px 60px 0px;
 }
+
+@media (max-width: 768px) {
+  .main_text{
+    flex-wrap: wrap;
+  }
+}
+
 .main_text label{
     margin-top: 30px;
     font-size: 20px;
@@ -29,35 +36,65 @@
     margin: 0 auto;
     display: flex;
 }
-.fourblocks{
+@media (max-width: 768px) {
+  .mainsection{
+    flex-wrap: wrap;
+  }
+}
+.fourblocks_vertical{
     display: flex;
     gap: 30px;
     flex-direction: column;
+}
+@media (max-width: 768px) {
+  .fourblocks_vertical{
+    flex-wrap: wrap;
+  }
 }
 .postsection{
     width: 75%;
     display: flex;
 }
+@media (max-width: 768px) {
+  .postsection{
+    flex-wrap: wrap;
+  }
+}
 .categorysection{
     width: 100%;
 }
-.fourblocks div{
+.fourblocks_vertical div{
+    margin-left: 95px;
+    width: 53%;
+    border: 1px solid;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: start;
     gap: 15px;
-    padding: 5px;
+    padding: 0px 0px 0px 20px;
+}
+@media (max-width: 768px) {
+  .fourblocks_vertical div{
+    flex-wrap: wrap;
+  }
+}
+.fourblocks_vertical div:nth-of-type(2) img {
+    width: 10%;
+    height: 6%;
+    object-fit: cover;
+    display: block;
 }
 
-.fourblocks div{ cursor: pointer; }
+.fourblocks_vertical div{ cursor: pointer; }
 
 /* Highlight active category */
-.fourblocks div.active{
+.fourblocks_vertical div.active{
     outline: 2px solid #FFD050;
     border-radius: 6px;
     background: #FFF7E6;
 }
-.fourblocks div img {
+.fourblocks_vertical div img {
     width: 15%;
     height: 15%;
     object-fit: cover;
@@ -75,7 +112,11 @@
     flex-direction: column;
     gap: 25px;
     width: 100%;
-    margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .secondsection{
+    flex-wrap: wrap;
+  }
 }
 .tagssection{
     margin: 0 auto;
@@ -96,6 +137,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+}
+@media (max-width: 768px) {
+  .tagblocks{
+    flex-wrap: wrap;
+  }
 }
 .bus, .exp{
     width: 40%;
