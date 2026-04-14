@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Build
+vite-project/dist/
+vite-project/dist-ssr/
+
+# Env
+.env
+.env.*
+!.env.example
+vite-project/backend/.env
+vite-project/mailer/.env

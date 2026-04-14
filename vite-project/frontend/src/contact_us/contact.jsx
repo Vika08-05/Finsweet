@@ -19,20 +19,34 @@ const ContactUs = () => {
         setSuccess(null);
         setError(null);
         try {
-            const res = await fetch('http://localhost:5000/api/send-email', {
+            const res = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    to: form.email,
+                    name: form.name,
+                    email: form.email,
                     subject: form.subject || 'Contact Form',
-                    text: `Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`
+                    message: form.message,
                 })
             });
-            const data = await res.json();
-            if (data.success) setSuccess('Message sent!');
-            else setError(data.error || 'Failed to send');
+            let data = null;
+            try {
+                data = await res.json();
+            } catch {
+                data = null;
+            }
+
+            if (!res.ok) {
+                const message = [data?.error, data?.detail].filter(Boolean).join(': ');
+                setError(message || `Request failed (${res.status})`);
+            } else if (data?.success) {
+                setSuccess('Message sent!');
+            } else {
+                const message = [data?.error, data?.detail].filter(Boolean).join(': ');
+                setError(message || 'Failed to send');
+            }
         } catch (err) {
-            setError('Error sending message');
+            setError(err?.message || 'Error sending message');
         }
         setLoading(false);
     };

@@ -7,6 +7,13 @@ export default defineConfig({
   ],
   server: {
     proxy: {
+      // Contact form mailer server
+      '/api/send-email': {
+        target: 'http://localhost:5002',
+        changeOrigin: true,
+        secure: false,
+        timeout: 10000,
+      },
       // Proxy API calls to the backend running on port 4000
       '/api': {
         target: 'http://localhost:4000',
