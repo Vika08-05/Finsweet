@@ -17,11 +17,17 @@ function Business() {
   const [posts, setPosts] = useState([]);
   const [apiError, setApiError] = useState(null);
   const [orientations, setOrientations] = useState({});
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
-  fetch('http://localhost:4000/api/data')
-      .then(res => res.json())
+    fetch('http://localhost:4000/api/data')
+      .then(async (res) => {
+        const data = await res.json().catch(() => null);
+        if (!res.ok) {
+          const message = data?.detail || data?.error || `HTTP ${res.status}`;
+          throw new Error(message);
+        }
+        return data;
+      })
       .then(data => {
         console.log('DATA:', data);
         setPosts(Array.isArray(data) ? data : []);
@@ -34,9 +40,13 @@ function Business() {
       });
   }, []);
 
-  // derive posts to display based on selectedCategory
+  // This page historically showed the Business category.
+  // Keep filtering by label=Business so the content stays consistent.
   const filteredPosts = (!apiError && posts)
-    ? posts.filter(p => !selectedCategory || (p.label && p.label.toLowerCase() === selectedCategory.toLowerCase()))
+    ? posts.filter(p => {
+        const postCategory = p?.categorySlug || p?.category || p?.label;
+        return String(postCategory || '').trim().toLowerCase() === 'business';
+      })
     : [];
 
   return (
@@ -108,34 +118,30 @@ function Business() {
             <div className="categorysection">
                 <h1 className='category'>Categories</h1>
                 <div className='fourblocks_vertical'>
-                    <div
-                      className={selectedCategory === 'Business' ? 'active' : ''}
-                      onClick={() => setSelectedCategory(selectedCategory === 'Business' ? null : 'Business')}
-                    >
-                      <img src={logo1} alt="" />
-                      <h2>Business</h2>
-                    </div>
-                    <div
-                      className={selectedCategory === 'Startup' ? 'active' : ''}
-                      onClick={() => setSelectedCategory(selectedCategory === 'Startup' ? null : 'Startup')}
-                    >
-                      <img src={logo2} alt="" />
-                      <h2>Startup</h2>
-                    </div>
-                    <div
-                      className={selectedCategory === 'Economy' ? 'active' : ''}
-                      onClick={() => setSelectedCategory(selectedCategory === 'Economy' ? null : 'Economy')}
-                    >
-                      <img src={logo3} alt="" />
-                      <h2>Economy</h2>
-                    </div>
-                    <div
-                      className={selectedCategory === 'Technology' ? 'active' : ''}
-                      onClick={() => setSelectedCategory(selectedCategory === 'Technology' ? null : 'Technology')}
-                    >
-                      <img src={logo4} alt="" />
-                      <h2>Technology</h2>
-                    </div>
+                    <Link to="/blog/business" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <div className='active'>
+                        <img src={logo1} alt="" />
+                        <h2>Business</h2>
+                      </div>
+                    </Link>
+                    <Link to="/blog/startup" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <div>
+                        <img src={logo2} alt="" />
+                        <h2>Startup</h2>
+                      </div>
+                    </Link>
+                    <Link to="/blog/economy" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <div>
+                        <img src={logo3} alt="" />
+                        <h2>Economy</h2>
+                      </div>
+                    </Link>
+                    <Link to="/blog/technology" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      <div>
+                        <img src={logo4} alt="" />
+                        <h2>Technology</h2>
+                      </div>
+                    </Link>
                 </div>
             </div> 
             <div className="tagssection">

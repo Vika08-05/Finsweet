@@ -22,8 +22,15 @@ function Blog() {
   const [orientations, setOrientations] = useState({});
 
   useEffect(() => {
-  fetch('http://localhost:4000/api/data')
-      .then(res => res.json())
+    fetch('http://localhost:4000/api/data')
+      .then(async (res) => {
+        const data = await res.json().catch(() => null);
+        if (!res.ok) {
+          const message = data?.detail || data?.error || `HTTP ${res.status}`;
+          throw new Error(message);
+        }
+        return data;
+      })
       .then(data => {
         console.log('DATA:', data);
         setPosts(Array.isArray(data) ? data : []);
@@ -142,27 +149,34 @@ function Blog() {
       
           <h1 className='category'>Choose A Category</h1>
           <div className='fourblocks'>
-            <div>
-              <img src={logo1} alt="" />
-              <h2>Business</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-            <div>
-              <img src={logo2} alt="" />
-              <h2>Startup</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-              
-            </div>
-            <div>
-              <img src={logo3} alt="" />
-              <h2>Economy</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-            <div>
-              <img src={logo4} alt="" />
-              <h2>Technology</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
+            <Link to="/blog/business" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo1} alt="" />
+                <h2>Business</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
+            <Link to="/blog/startup" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo2} alt="" />
+                <h2>Startup</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
+            <Link to="/blog/economy" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo3} alt="" />
+                <h2>Economy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
+            <Link to="/blog/technology" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo4} alt="" />
+                <h2>Technology</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
           </div>
 
           <div className="joinblock">

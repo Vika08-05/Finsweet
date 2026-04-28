@@ -130,26 +130,34 @@ function App() {
       <div className="fourblocksblock">
           <h1 className='category'>Choose A Category</h1>
           <div className='fourblocks'>
-            <div>
-              <img src={logo1} alt="" />
-              <h2>Business</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-            <div>
-              <img src={logo2} alt="" />
-              <h2>Startup</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-            <div>
-              <img src={logo3} alt="" />
-              <h2>Economy</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-            <div>
-              <img src={logo4} alt="" />
-              <h2>Technology</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
+            <Link to="/blog/business" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo1} alt="" />
+                <h2>Business</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
+            <Link to="/blog/startup" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo2} alt="" />
+                <h2>Startup</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
+            <Link to="/blog/economy" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo3} alt="" />
+                <h2>Economy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
+            <Link to="/blog/technology" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div>
+                <img src={logo4} alt="" />
+                <h2>Technology</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+              </div>
+            </Link>
           </div>        
       </div>
 

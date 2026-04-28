@@ -31,6 +31,10 @@
   margin-right: 20px;
 }
 
+.subscribe-feedback{
+  margin: 12px 0 0;
+}
+
 .security{
   display: flex;
   justify-content: space-between;

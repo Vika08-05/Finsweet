@@ -17,8 +17,15 @@ function Post() {
   const postsPerPage = 3; // show 3 posts per page
 
   useEffect(() => {
-  fetch('http://localhost:4000/api/data')
-      .then(res => res.json())
+    fetch('http://localhost:4000/api/data')
+      .then(async (res) => {
+        const data = await res.json().catch(() => null);
+        if (!res.ok) {
+          const message = data?.detail || data?.error || `HTTP ${res.status}`;
+          throw new Error(message);
+        }
+        return data;
+      })
       .then(data => {
         console.log('DATA:', data);
         setPosts(Array.isArray(data) ? data : []);
