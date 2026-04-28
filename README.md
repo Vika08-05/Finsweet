@@ -105,22 +105,6 @@ Required mailer variables:
 - `SMTP_USER`
 - `SMTP_PASS`
 
-Example `mailer/.env` (Gmail SMTP):
-
-```env
-MAILER_PORT=5001
-
-MAIL_TO=gvika739@gmail.com
-# MAIL_FROM defaults to SMTP_USER
-# MAIL_FROM=gvika739@gmail.com
-
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_SECURE=false
-SMTP_USER=gvika739@gmail.com
-SMTP_PASS=YOUR_GMAIL_APP_PASSWORD
-```
-
 Note: For Gmail you typically need 2FA enabled and an App Password for `SMTP_PASS`.
 
 ### 2) Run the mailer server
